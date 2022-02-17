@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80.5%;
+}
+
+.slider-wrapper, .slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__progressbar {
+    width: 360px;
+    position: relative;
+    height: 1px;
+    background-color: #C8D9FB;
+    margin-right: 40px;
+}
+
+.slider-line {
+    position: absolute;
+    top: -1px;
+    width: 60px;
+    height: 3px;
+    background-color: #527CCD;
+}
+
+.slider__btn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #C8D9FB;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.title {
+    font: 700 50px/60px 'Roboto', sans-serif;
+    color: rgba(82, 124, 205, 1);
+    margin-bottom: 40px;
+}
+.news {
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    overflow: hidden;
+}
+.news__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing:border-box;
+    /*cursor: move;*/
+    padding: 20px;
+    max-width: 260px;
+    border: 1px solid rgba(200, 217, 251, 1);
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.news .news__item:last-child {
+    margin-right: 0;
+}
+.active {
+    border:  1px solid  rgba(82, 124, 205, 1);
+}
+.item_img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item_date {
+    font: 12px/22px 'Roboto', sans-serif;
+    color: rgba(82, 124, 205, 0.6);
+}
+
+.item_title {
+    font: 16px/26px 'Roboto', sans-serif;
+    color: #527CCD;
+    letter-spacing: -0.2px;
+}
+
+.item_text {
+    font: 12px/22px 'Roboto', sans-serif;
+    color: #527CCD;
+}
+
+.selected {
+    opacity: 0.6;
+}
+
+@media (max-width: 995px) {
+    .slider__progressbar {
+        width: 300px;
+    }
+
+    .title {
+        font: 700 45px/55px 'Roboto', sans-serif;
+    }
+
+    .slider__btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__progressbar {
+        display: none;
+    }
+
+    .title {
+        font: 700 40px/50px 'Roboto', sans-serif;
+    }
+
+    .slider__progressbar {
+        width: 240px;
+    }
+
+    .slider-line {
+        width: 40px;
+    }
+}
+
+@media (max-width: 540px) {
+    .title {
+        font: 700 35px/45px 'Roboto', sans-serif;
+    }
+
+    .slider__btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font: 700 30px/40px 'Roboto', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .slider__btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .news__item {
+        max-width: 250px;
+    }
+}
